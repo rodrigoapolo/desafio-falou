@@ -4,33 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.HomeActivity">
+    tools:context=".view.HomeFragment">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
         android:background="@drawable/bordas_aredondada"
         android:backgroundTint="#1A91A9B1"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingStart="10dp"
-        android:paddingTop="4dp"
-        android:paddingEnd="10dp"
-        android:paddingBottom="4dp"
+        app:layout_constraintVertical_bias="0.04"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="7dp"
             android:src="@mipmap/ic_english" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="15dp"
             android:fontFamily="@font/roboto_condensed_light"
             android:text="english"
             android:textAllCaps="true"
@@ -50,26 +52,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.25" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bnt_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="26dp"
-        android:backgroundTint="#5BD6FD"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bnt_bordas_aredondada"
         android:fontFamily="@font/roboto_condensed_bold"
-        android:padding="22dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="21dp"
         android:text="search"
+        android:textColor="@color/white"
         android:textAllCaps="true"
         android:textSize="18sp"
         android:visibility="invisible"
+        style="@style/Widget.AppCompat.Button.Borderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edi_search"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/white"
+        android:visibility="gone"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
