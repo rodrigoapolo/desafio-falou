@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PurchaseActivity">
+    tools:context=".view.PurchaseFragment">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="-64dp"
+        android:layout_height="442dp"
         android:background="@drawable/img_pessoa"
-        app:layout_constraintBottom_toTopOf="@id/img_icon"
+        app:layout_constraintVertical_bias="0.54"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,13 +25,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.53" />
 
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="-40dp"
         android:src="@drawable/title"
         app:layout_constraintEnd_toEndOf="@id/img_icon"
         app:layout_constraintHorizontal_bias="0.2"
@@ -47,7 +47,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/roboto_condensed_bold"
         android:gravity="center"
-        android:text="Subscribe now to get unlimited searches and full access to all features."
+        android:text="@string/text_subscribe"
         android:textColor="#052D39"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/img_logo"
@@ -59,12 +59,12 @@
         android:id="@+id/tex_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/roboto_condensed_light"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="55dp"
+        android:fontFamily="@font/roboto_condensed_bold"
         android:gravity="center"
-        android:text="Try 7 Days Free, then only $19,99 per year. Cancel anytime."
+        android:text="@string/text_value"
         android:textColor="#052D39"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@id/tex_subcribe"
@@ -77,8 +77,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="27dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/bnt_bordas_aredondada"
         android:fontFamily="@font/roboto_condensed_bold"
         android:gravity="center"
@@ -88,8 +89,10 @@
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="18sp"
+        style="@style/Widget.AppCompat.Button.Borderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tex_search"
         app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout >

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DictionMaster</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_subscribe">Subscribe now to get <font color='#5BD6FD'>unlimited</font> searches and full access to <font color='#5BD6FD'>all features.</font></string>
+    <string name="text_value">Try 7 Days Free, <font face='roboto_condensed_light'>then only</font> $19,99 <font face='roboto_condensed_light'> per year. Cancel anytime.</font></string>
 </resources>
