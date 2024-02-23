@@ -71,13 +71,18 @@ class WordDefinitionFragment : Fragment(R.layout.fragment_word_definition) {
         if (!wordDefinition.phonetics?.get(0)?.audio.isNullOrBlank()) {
             mediaPlayer.setDataSource(wordDefinition.phonetics!![0].audio)
             mediaPlayer.prepareAsync()
+
+            binding.imgAudio.visibility = View.GONE
+            binding.loadingProgressBar.visibility = View.VISIBLE
+
+            mediaPlayer.setOnPreparedListener {
+                binding.imgAudio.visibility = View.VISIBLE
+                binding.loadingProgressBar.visibility = View.GONE
+            }
         } else {
             binding.imgAudio.visibility = View.INVISIBLE
             binding.imgBackgrou.visibility = View.INVISIBLE
         }
-
-
-
 
 
         var cacheWordSearch =
