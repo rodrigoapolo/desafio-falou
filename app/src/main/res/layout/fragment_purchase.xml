@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="442dp"
         android:background="@drawable/img_pessoa"
+        app:layout_constraintVertical_bias="0.54"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/img_icon"
         app:layout_constraintStart_toStartOf="parent"

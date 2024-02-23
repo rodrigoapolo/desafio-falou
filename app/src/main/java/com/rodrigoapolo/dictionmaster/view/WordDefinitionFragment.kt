@@ -99,7 +99,7 @@ class WordDefinitionFragment : Fragment(R.layout.fragment_word_definition) {
     }
 
     private fun formtExample(meanings: List<Meaning>?, position: Int): SpannableString {
-        val synonym = meanings?.get(position)?.definitions?.get(0)?.synonyms
+        val synonym = meanings?.get(position)?.definitions?.getOrNull(0)?.synonyms
         if (synonym.isNullOrEmpty())
             return SpannableString(HtmlCompat.fromHtml("", HtmlCompat.FROM_HTML_MODE_LEGACY))
         val example = buildString {
@@ -114,7 +114,7 @@ class WordDefinitionFragment : Fragment(R.layout.fragment_word_definition) {
 
     private fun formtDefinition(meanings: List<Meaning>?, position: Int): SpannableString {
         val partOf = meanings?.get(position)?.partOfSpeech
-        val definition = meanings?.get(position)?.definitions?.get(0)?.definition ?: ""
+        val definition = meanings?.get(position)?.definitions?.getOrNull(0)?.definition ?: ""
         if (definition.isNullOrEmpty())
             return SpannableString(HtmlCompat.fromHtml("", HtmlCompat.FROM_HTML_MODE_LEGACY))
         val txt =
@@ -130,7 +130,7 @@ class WordDefinitionFragment : Fragment(R.layout.fragment_word_definition) {
 
             val dateNow = LocalDate.now()
 
-            if (cacheWordSearch.size >= 100) {
+            if (cacheWordSearch.size >= 10) {
                 if (dateNow.toString() == date) {
                     startPurchase()
                 } else {
